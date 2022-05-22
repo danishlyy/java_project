@@ -4,9 +4,7 @@ import com.spring.bean.domain.User;
 import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.factory.support.AbstractBeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
-import org.springframework.beans.factory.support.DefaultBeanNameGenerator;
 import org.springframework.beans.factory.support.GenericBeanDefinition;
-import org.springframework.context.annotation.AnnotationBeanNameGenerator;
 
 /**
  * {@link org.springframework.beans.factory.config.BeanDefinition}
