@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+  <!-- 静态方法实现Bean实例化 -->
+  <bean id="user-by-static-method" class="com.spring.bean.domain.User" factory-method="createUser"/>
+
+  <!-- 实例化方法实现Bean实例化 -->
+  <bean id="user-by-instance-method" factory-method="createUser" factory-bean="userFactory"/>
+
+  <bean id="userFactory" class="com.spring.bean.factory.impl.DefaultUserFactory"/>
+
+  <!-- 使用FactoryBean进行实例化 -->
+  <bean id="userFactoryBean" class="com.spring.bean.factory.impl.UserFactoryBean"/>
+</beans>

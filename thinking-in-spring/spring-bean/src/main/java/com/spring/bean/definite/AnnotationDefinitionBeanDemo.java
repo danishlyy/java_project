@@ -1,6 +1,9 @@
 package com.spring.bean.definite;
 
 import com.spring.bean.domain.User;
+import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.serviceloader.ServiceLoaderFactoryBean;
 import org.springframework.beans.factory.support.AbstractBeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.BeanDefinitionReaderUtils;
@@ -31,6 +34,7 @@ public class AnnotationDefinitionBeanDemo {
         System.out.println("User 类型所有的Beans " + annotationConfigApplicationContext.getBeansOfType(User.class));
         // 显示关闭Spring上下文
         annotationConfigApplicationContext.close();
+
     }
 
 
